@@ -3,23 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Menú Desplegable</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </head>
 <body>
-    <nav>
+    <header>
+        <!-- Ícono de menú (hamburguesa) -->
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Menú lateral -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="trabajos.html">Trabajos</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="menu/inicio.html"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="menu/trabajos.html"><i class="fas fa-briefcase"></i>Trabajos</a></li>
+            <li><a href="menu/proyectos.html"><i class="fas fa-rocket"></i>Proyectos</a></li>
+            <li><a href="menu/servicios.html"><i class="fas fa-globe"></i>Servicios</a></li>
+            <li><a href="menu/contacto.html"><i class="fas fa-envelope"></i>Contacto</a></li>
         </ul>
-    </nav>
-    <section>
-        <h1>Página de Inicio</h1>
-        <p>Bienvenido a la página de inicio, aquí encontrarás información general sobre nuestro sitio.</p>
-    </section>
+    </div>
+
+    <div class="content">
+        <br><br><br>
+        <!-- Contenido de la página -->
+        <h1>Página Principal </h1>
+        <p>Bienvenido a la página principal, selecciona una opción en el menú lateral para navegar a las demás páginas.</p>
+        <!-- Imagen específica para la página de inicio -->
+        <img src="img/fondo.jpg" alt="Imagen de Index" style="width:100%; max-width:900px;">
+
+    </div>
+
+    <script>
+        // Código para mostrar y ocultar el menú lateral
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
-
